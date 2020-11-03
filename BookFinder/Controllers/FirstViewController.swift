@@ -19,18 +19,24 @@ class FirstViewController: UIViewController {
     
     var textFieldBtn: UIButton {
         let button = UIButton(type: .custom)
-        button.setImage(UIImage(named: "search"), for: .normal)
+        button.setImage(UIImage(named: K.image), for: .normal)
         button.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         button.frame = CGRect(x: CGFloat(txtField.frame.size.width - 40), y: CGFloat(5), width: CGFloat(40), height: CGFloat(30))
         button.addTarget(self, action: #selector(self.refreshContent), for: .touchUpInside)
-
         return button
     }
 
     
     
     @objc func refreshContent(){
-        print("refreshed")
+        performSegue(withIdentifier: K.segue, sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as! SecondViewController
+        if let safeText = txtField.text{
+            destinationVC.searchResult = safeText
+        }
     }
     
     func addButton(){
