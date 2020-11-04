@@ -10,8 +10,8 @@ import Foundation
 import UIKit
 
 struct BookModel{
-    var image : UIImage
     var titleOfBook : String
-    var authors : String
+    var authors : [String]
     var publisher : String
+    var imageLink : String
 }

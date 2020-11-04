@@ -15,9 +15,11 @@ class MyCellTableViewCell: UITableViewCell {
     @IBOutlet weak var authorsLabel: UILabel!
     @IBOutlet weak var publisherLabel: UILabel!
     
-    @IBAction func moreButtonPressed(_ sender: UIButton) {
-        
-        
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        button.layer.cornerRadius = 5
     }
+  
+    @IBOutlet weak var button: UIButton!
     
 }
