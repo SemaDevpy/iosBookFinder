@@ -8,8 +8,13 @@
 
 import UIKit
 
+
+
+
+
 class MyCellTableViewCell: UITableViewCell {
 
+    
     @IBOutlet weak var bookImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var authorsLabel: UILabel!
@@ -20,6 +25,8 @@ class MyCellTableViewCell: UITableViewCell {
         button.layer.cornerRadius = 5
     }
   
+    
+    
     @IBOutlet weak var button: UIButton!
     
 }

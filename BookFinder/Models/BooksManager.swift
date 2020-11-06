@@ -39,41 +39,33 @@ struct BooksManager {
             switch response.result{
             case .success(let value):
                 let json = JSON(value)
-                print(json)
                 var books =  [BookModel]()
-                var listOfTitles = [String]()
-                var listOfAuthors = [[String]]()
-                var listOfPublishers = [String]()
-                var listOfDescriptions = [String]()
-                var listOfPreviewLinks = [String]()
-                var listOfImageLinks = [String]()
                 
                 for (key,subJson) : (String , JSON) in json["items"]{
                     //getting all titles
                     let title = subJson["volumeInfo"]["title"].stringValue
-                    listOfTitles.append(title)
                     //getting all authors
                     var newArray = [String]()
                     if let authors = subJson["volumeInfo"]["authors"].array{
                         for item in authors{
                             newArray.append(item.stringValue)
                         }
-                        listOfAuthors.append(newArray)
                     }
                     //getting all publishers
                     let publisher = subJson["volumeInfo"]["publisher"].stringValue
-                    listOfPublishers.append(publisher)
                     //getting all descriptions for books
                     let description = subJson["volumeInfo"]["description"].stringValue
-                    listOfDescriptions.append(description)
                     //get all previewlinks for books
                     let previewLink = subJson["volumeInfo"]["previewLink"].stringValue
-                    listOfPreviewLinks.append(previewLink)
                     //getting all links of images of books
-                    let imageLink = subJson["volumeInfo"]["imageLinks"]["thumbnail"].stringValue
-                    listOfImageLinks.append(imageLink)
+                    var newLink = " "
+                    if let imageLink = subJson["volumeInfo"]["imageLinks"]["thumbnail"].string{
+                        newLink = imageLink
+                    }else{
+                        newLink = " "
+                    }
                     //creating bookModel object
-                    let book = BookModel(titleOfBook: title, authors: newArray, publisher: publisher, imageLink: imageLink)
+                    let book = BookModel(titleOfBook: title, authors: newArray, publisher: publisher, imageLink: newLink, description: description, previewLink: previewLink)
                     books.append(book)
                     self.delegate?.didUpdateBook(self, books: books)
                 }

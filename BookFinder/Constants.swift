@@ -13,4 +13,5 @@ struct K {
     static let segue = "goToResults"
     static let image = "search"
     static let cellIdentifier = "cell"
+    static let secondSegue = "goToDescription"
 }

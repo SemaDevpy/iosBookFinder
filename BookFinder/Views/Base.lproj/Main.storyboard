@@ -125,6 +125,9 @@
                                                     <state key="normal" title="More &gt;">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="btnTapped:" destination="Zpf-ew-m1P" eventType="touchUpInside" id="yX5-FG-ZiM"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -168,11 +171,72 @@
                     <navigationItem key="navigationItem" title="Results" id="H1e-nc-drg"/>
                     <connections>
                         <outlet property="table" destination="Bda-mW-77F" id="PlE-RB-WYt"/>
+                        <segue destination="Btw-YH-dvX" kind="show" identifier="goToDescription" id="hbu-BM-t9N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AuP-Yc-i4G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2159.4202898550725" y="99.776785714285708"/>
+            <point key="canvasLocation" x="2170" y="114"/>
+        </scene>
+        <!--Book Description-->
+        <scene sceneID="li0-Iv-rMP">
+            <objects>
+                <viewController id="Btw-YH-dvX" customClass="ThirdViewController" customModule="BookFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="v3q-G8-7Dr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="NML-eS-QSB">
+                                <rect key="frame" x="0.0" y="88" width="414" height="748"/>
+                                <color key="backgroundColor" red="0.8509054184" green="0.85102838280000004" blue="0.8508786559" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aes-4Z-W56">
+                                <rect key="frame" x="0.0" y="836" width="414" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pZG-aP-Qpv">
+                                        <rect key="frame" x="147" y="12.5" width="120" height="35"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="mvh-no-2xo"/>
+                                            <constraint firstAttribute="width" constant="120" id="qTM-Qv-XOK"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.8509054184" green="0.85102838280000004" blue="0.8508786559" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="pZG-aP-Qpv" firstAttribute="centerY" secondItem="aes-4Z-W56" secondAttribute="centerY" id="GY3-c7-38o"/>
+                                    <constraint firstItem="pZG-aP-Qpv" firstAttribute="centerX" secondItem="aes-4Z-W56" secondAttribute="centerX" id="LZ0-Wh-r8W"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="NML-eS-QSB" secondAttribute="bottom" constant="60" id="5Ia-gv-ve9"/>
+                            <constraint firstItem="aes-4Z-W56" firstAttribute="top" secondItem="NML-eS-QSB" secondAttribute="bottom" id="Jtn-9a-cnA"/>
+                            <constraint firstItem="NML-eS-QSB" firstAttribute="top" secondItem="tNe-H8-7ht" secondAttribute="top" id="OxA-Dj-dWm"/>
+                            <constraint firstAttribute="bottom" secondItem="aes-4Z-W56" secondAttribute="bottom" id="Zqq-Y4-M22"/>
+                            <constraint firstItem="NML-eS-QSB" firstAttribute="leading" secondItem="v3q-G8-7Dr" secondAttribute="leading" id="rah-bR-rgB"/>
+                            <constraint firstItem="aes-4Z-W56" firstAttribute="trailing" secondItem="tNe-H8-7ht" secondAttribute="trailing" id="rw1-it-7ho"/>
+                            <constraint firstAttribute="trailing" secondItem="NML-eS-QSB" secondAttribute="trailing" id="twJ-mK-kP5"/>
+                            <constraint firstItem="aes-4Z-W56" firstAttribute="leading" secondItem="tNe-H8-7ht" secondAttribute="leading" id="zIM-Ml-kKt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tNe-H8-7ht"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Book Description" id="HES-bP-gLw"/>
+                    <connections>
+                        <outlet property="btn" destination="pZG-aP-Qpv" id="Hx7-hT-mP1"/>
+                        <outlet property="textView" destination="NML-eS-QSB" id="3aJ-Oz-EXR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zp7-yR-Zre" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3227.536231884058" y="113.83928571428571"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wEe-ar-6s7">

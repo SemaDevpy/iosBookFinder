@@ -11,6 +11,7 @@
 		A22FC1CE25512FAF00269B26 /* MyCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22FC1CD25512FAF00269B26 /* MyCellTableViewCell.swift */; };
 		A22FC1D0255131A500269B26 /* BookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22FC1CF255131A500269B26 /* BookModel.swift */; };
 		A22FC1D225514D4200269B26 /* BooksManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22FC1D125514D4200269B26 /* BooksManager.swift */; };
+		A2373F6425554F1D0089CFAE /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2373F6325554F1D0089CFAE /* ThirdViewController.swift */; };
 		A2D8C019254FE0470098B43B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D8C018254FE0470098B43B /* AppDelegate.swift */; };
 		A2D8C01B254FE0470098B43B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D8C01A254FE0470098B43B /* SceneDelegate.swift */; };
 		A2D8C01D254FE0470098B43B /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D8C01C254FE0470098B43B /* FirstViewController.swift */; };
@@ -26,6 +27,7 @@
 		A22FC1CD25512FAF00269B26 /* MyCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCellTableViewCell.swift; sourceTree = "<group>"; };
 		A22FC1CF255131A500269B26 /* BookModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookModel.swift; sourceTree = "<group>"; };
 		A22FC1D125514D4200269B26 /* BooksManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksManager.swift; sourceTree = "<group>"; };
+		A2373F6325554F1D0089CFAE /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		A2D8C015254FE0470098B43B /* BookFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2D8C018254FE0470098B43B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2D8C01A254FE0470098B43B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 			children = (
 				A2D8C01C254FE0470098B43B /* FirstViewController.swift */,
 				A2D8C02F25504D1A0098B43B /* SecondViewController.swift */,
+				A2373F6325554F1D0089CFAE /* ThirdViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2D8C03225504D950098B43B /* Constants.swift in Sources */,
+				A2373F6425554F1D0089CFAE /* ThirdViewController.swift in Sources */,
 				A2D8C03025504D1A0098B43B /* SecondViewController.swift in Sources */,
 				A2D8C01D254FE0470098B43B /* FirstViewController.swift in Sources */,
 				A22FC1CE25512FAF00269B26 /* MyCellTableViewCell.swift in Sources */,

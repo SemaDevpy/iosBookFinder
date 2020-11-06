@@ -30,6 +30,7 @@ class FirstViewController: UIViewController {
     
     @objc func refreshContent(){
         performSegue(withIdentifier: K.segue, sender: self)
+        txtField.text = ""
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

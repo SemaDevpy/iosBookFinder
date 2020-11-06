@@ -14,4 +14,6 @@ struct BookModel{
     var authors : [String]
     var publisher : String
     var imageLink : String
+    var description : String
+    var previewLink : String
 }

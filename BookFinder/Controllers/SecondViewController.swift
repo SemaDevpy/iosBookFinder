@@ -19,29 +19,34 @@ class SecondViewController: UIViewController {
     var searchResult = ""
     
     @IBOutlet weak var table: UITableView!
- 
     
+    var indexPath = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         booksManager.delegate = self
-        table.delegate = self
         table.dataSource = self
         booksManager.fetchBooks(by: searchResult)
         
     }
     
-    @IBAction func buttonPressed(_ sender: UIButton) {
-        
+    
+    @IBAction func btnTapped(_ sender: UIButton) {
+        indexPath = sender.tag
+        performSegue(withIdentifier: K.secondSegue, sender: self)
     }
     
-  
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+         let destinationVC = segue.destination as! ThirdViewController
+        destinationVC.descrptn = books[indexPath].description
+        
+     }
     
 }
 
 
 //MARK: - UITableViewDataSource, UITableViewDelegate
-extension SecondViewController : UITableViewDataSource, UITableViewDelegate{
+extension SecondViewController : UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return books.count
     }
@@ -49,13 +54,19 @@ extension SecondViewController : UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = table.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath) as! MyCellTableViewCell
         cell.titleLabel.text = "Title: \(books[indexPath.row].titleOfBook)"
+        cell.button.tag = indexPath.row
         var newAuthorsString = ""
         for item in books[indexPath.row].authors{
             newAuthorsString.append(item)
         }
         cell.authorsLabel.text = "Authors: \(newAuthorsString)"
         cell.publisherLabel.text = "Publisher: \(books[indexPath.row].publisher)"
-        cell.bookImage.sd_setImage(with: URL(string: books[indexPath.row].imageLink), completed: nil)
+        if books[indexPath.row].imageLink != " "{
+            cell.bookImage.sd_setImage(with: URL(string: books[indexPath.row].imageLink), completed: nil)
+        }else{
+            cell.bookImage.image = #imageLiteral(resourceName: "bookNotFound")
+        }
+        cell.tag = indexPath.row
         return cell
     }
     
@@ -72,8 +83,9 @@ extension SecondViewController : BooksManagerDelegate{
     }
     
     func didFailWithError(error: Error) {
-       print(error)
+        print(error)
     }
     
     
 }
+

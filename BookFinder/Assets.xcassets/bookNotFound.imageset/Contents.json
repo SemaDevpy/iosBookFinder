@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "twilight.jpeg",
+      "filename" : "bookNotFound.jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "twilight@2x.jpeg",
+      "filename" : "bookNotFound@2x.jpg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "twilight@3x.jpeg",
+      "filename" : "bookNotFound@3x.jpg",
       "idiom" : "universal",
       "scale" : "3x"
     }
