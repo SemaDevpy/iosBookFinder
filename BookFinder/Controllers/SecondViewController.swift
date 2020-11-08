@@ -39,6 +39,7 @@ class SecondViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
          let destinationVC = segue.destination as! ThirdViewController
         destinationVC.descrptn = books[indexPath].description
+        destinationVC.sampleURL = books[indexPath].previewLink
         
      }
     

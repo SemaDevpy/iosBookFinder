@@ -53,8 +53,6 @@ struct BooksManager {
                     }
                     //getting all publishers
                     let publisher = subJson["volumeInfo"]["publisher"].stringValue
-                    //getting all descriptions for books
-                    let description = subJson["volumeInfo"]["description"].stringValue
                     //get all previewlinks for books
                     let previewLink = subJson["volumeInfo"]["previewLink"].stringValue
                     //getting all links of images of books
@@ -63,6 +61,13 @@ struct BooksManager {
                         newLink = imageLink
                     }else{
                         newLink = " "
+                    }
+                    //getting all descriptions for books
+                    var description = " "
+                    if let descrptn =  subJson["volumeInfo"]["description"].string{
+                        description = descrptn
+                    }else{
+                        description = " "
                     }
                     //creating bookModel object
                     let book = BookModel(titleOfBook: title, authors: newArray, publisher: publisher, imageLink: newLink, description: description, previewLink: previewLink)
