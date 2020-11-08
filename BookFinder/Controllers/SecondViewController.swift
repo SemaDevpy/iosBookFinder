@@ -46,7 +46,7 @@ class SecondViewController: UIViewController {
 }
 
 
-//MARK: - UITableViewDataSource, UITableViewDelegate
+//MARK: - UITableViewDataSource
 extension SecondViewController : UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return books.count
